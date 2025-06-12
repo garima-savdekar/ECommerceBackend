@@ -1,0 +1,180 @@
+2025-06-12 17:37:04,319 | INFO | User registered successfully: parthsavdekar59@gmail.com | Role: RoleEnum.user
+2025-06-12 17:38:05,291 | INFO | User registered successfully: john@gmail.com | Role: RoleEnum.user
+2025-06-12 17:39:13,685 | WARNING | Failed login: parthsavdekar59@gmail.com
+2025-06-12 17:39:13,693 | WARNING | [POST /auth/signin] Invalid credentials
+2025-06-12 17:39:25,179 | INFO | Successful login: parthsavdekar59@gmail.com | Role: RoleEnum.user
+2025-06-12 17:40:53,906 | INFO | Password reset email sent to: parthsavdekar59@gmail.com
+2025-06-12 17:40:53,907 | INFO | Password reset token generated and emailed to: parthsavdekar59@gmail.com
+2025-06-12 17:42:49,818 | INFO | Password reset successful for user ID: 4 | Email: parthsavdekar59@gmail.com
+2025-06-12 17:43:38,143 | WARNING | Signup failed Duplicate email: admin1@gmail.com
+2025-06-12 17:43:38,144 | WARNING | [POST /auth/signup] Duplicate email: admin1@gmail.com
+2025-06-12 17:43:44,670 | INFO | User registered successfully: admin3@gmail.com | Role: RoleEnum.admin
+2025-06-12 17:44:15,360 | INFO | Successful login: admin3@gmail.com | Role: RoleEnum.admin
+2025-06-12 17:46:53,634 | INFO | Admin 6 creating product: Dining
+2025-06-12 17:49:26,532 | INFO | Admin 6 creating product: HP
+2025-06-12 17:49:36,278 | INFO | Admin 6 retrieving all products (skip=0, limit=10)
+2025-06-12 17:49:43,304 | INFO | Admin 6 retrieving all products (skip=2, limit=10)
+2025-06-12 17:49:48,447 | INFO | Admin 6 retrieving all products (skip=1, limit=10)
+2025-06-12 17:49:53,532 | INFO | Admin 6 retrieving all products (skip=0, limit=10)
+2025-06-12 17:50:04,069 | INFO | Admin 6 fetching product ID: 1
+2025-06-12 17:50:04,071 | WARNING | Product ID 1 not found for admin 6
+2025-06-12 17:50:04,074 | WARNING | [GET /admin/products/1] Product not found: Product Not Found
+2025-06-12 17:50:09,142 | INFO | Admin 6 fetching product ID: 2
+2025-06-12 17:50:09,144 | WARNING | Product ID 2 not found for admin 6
+2025-06-12 17:50:09,145 | WARNING | [GET /admin/products/2] Product not found: Product Not Found
+2025-06-12 17:50:13,617 | INFO | Admin 6 fetching product ID: 3
+2025-06-12 17:50:19,203 | INFO | Admin 6 fetching product ID: 4
+2025-06-12 17:50:24,841 | INFO | Admin 6 fetching product ID: 5
+2025-06-12 17:50:24,842 | WARNING | Product ID 5 not found for admin 6
+2025-06-12 17:50:24,843 | WARNING | [GET /admin/products/5] Product not found: Product Not Found
+2025-06-12 17:50:35,769 | INFO | Admin 6 updating product ID: 1
+2025-06-12 17:50:35,771 | WARNING | Update failed - Product ID 1 not found for admin 6
+2025-06-12 17:50:35,772 | WARNING | [PUT /admin/products/1] Product not found: Product Not Found
+2025-06-12 17:51:20,508 | INFO | Admin 6 updating product ID: 3
+2025-06-12 17:51:37,641 | INFO | Admin 6 updating product ID: 3
+2025-06-12 17:51:46,997 | INFO | Admin 6 updating product ID: 3
+2025-06-12 17:51:58,309 | INFO | Admin 6 deleting product ID: 7
+2025-06-12 17:51:58,310 | WARNING | Delete failed - Product ID 7 not found for admin 6
+2025-06-12 17:51:58,312 | WARNING | [DELETE /admin/products/7] Product not found: Product Not Found
+2025-06-12 17:52:02,510 | INFO | Admin 6 deleting product ID: 1
+2025-06-12 17:52:02,512 | WARNING | Delete failed - Product ID 1 not found for admin 6
+2025-06-12 17:52:02,513 | WARNING | [DELETE /admin/products/1] Product not found: Product Not Found
+2025-06-12 17:52:13,862 | INFO | Admin 6 deleting product ID: 4
+2025-06-12 17:52:13,876 | INFO | Admin 6 deleted product ID: 4
+2025-06-12 17:52:19,151 | INFO | Admin 6 deleting product ID: 4
+2025-06-12 17:52:19,152 | WARNING | Delete failed - Product ID 4 not found for admin 6
+2025-06-12 17:52:19,155 | WARNING | [DELETE /admin/products/4] Product not found: Product Not Found
+2025-06-12 17:52:28,692 | INFO | Admin 6 creating product: HP
+2025-06-12 17:54:06,630 | WARNING | Failed login: parthsavdekar@gmail.com
+2025-06-12 17:54:06,631 | WARNING | [POST /auth/signin] Invalid credentials
+2025-06-12 17:54:12,579 | INFO | Successful login: parthsavdekar59@gmail.com | Role: RoleEnum.user
+2025-06-12 17:54:37,304 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:55:21,400 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:55:30,686 | INFO | User 4 listing products with filters | category=furn, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:55:36,578 | INFO | User 4 listing products with filters | category=Furn, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:55:49,360 | INFO | User 4 listing products with filters | category=lap, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:55:54,071 | INFO | User 4 listing products with filters | category=laptop, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:56:07,610 | INFO | User 4 searching products with keyword: lap
+2025-06-12 17:56:20,340 | INFO | User 4 searching products with keyword: len
+2025-06-12 17:56:26,762 | INFO | User 4 searching products with keyword: fur
+2025-06-12 17:56:42,492 | INFO | User 4 searching products with keyword: fur
+2025-06-12 17:56:47,229 | INFO | User 4 searching products with keyword: Fur
+2025-06-12 17:57:05,316 | INFO | User 4 listing products with filters | category=laptop, min_price=500.0, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 17:57:24,842 | INFO | User 4 listing products with filters | category=laptop, min_price=500.0, max_price=250.0, sort_by=id, skip=0, limit=10
+2025-06-12 17:57:30,704 | INFO | User 4 listing products with filters | category=laptop, min_price=None, max_price=250.0, sort_by=id, skip=0, limit=10
+2025-06-12 17:57:39,053 | INFO | User 4 listing products with filters | category=laptop, min_price=None, max_price=250.0, sort_by=id, skip=0, limit=10
+2025-06-12 17:57:45,543 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:03:04,905 | INFO | User 4 listing products with filters | category=None, min_price=250.0, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:03:23,908 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=10000.0, sort_by=id, skip=0, limit=10
+2025-06-12 18:05:30,982 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=10000.0, sort_by=id, skip=0, limit=10
+2025-06-12 18:07:10,898 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=50000.0, sort_by=id, skip=0, limit=10
+2025-06-12 18:07:21,540 | INFO | User 4 listing products with filters | category=None, min_price=250.0, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:07:31,143 | INFO | User 4 listing products with filters | category=None, min_price=50000.0, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:07:40,278 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:07:49,448 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=price, skip=0, limit=10
+2025-06-12 18:09:38,205 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=name, skip=0, limit=10
+2025-06-12 18:09:46,574 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=desc, skip=0, limit=10
+2025-06-12 18:10:02,327 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=1, limit=10
+2025-06-12 18:10:10,751 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=3
+2025-06-12 18:10:16,799 | INFO | User 4 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=2
+2025-06-12 18:10:24,223 | INFO | User 4 listing products with filters | category=Furniture, min_price=None, max_price=None, sort_by=id, skip=0, limit=2
+2025-06-12 18:10:27,254 | INFO | User 4 listing products with filters | category=Furniture, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:10:33,779 | INFO | User 4 listing products with filters | category=Furni, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:10:41,469 | INFO | User 4 listing products with filters | category=furniture, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:13:15,613 | INFO | User 4 searching products with keyword: Fur
+2025-06-12 18:13:20,611 | INFO | User 4 searching products with keyword: Furniture
+2025-06-12 18:13:25,976 | INFO | User 4 searching products with keyword: Furniture
+2025-06-12 18:13:42,238 | INFO | User 4 listing products with filters | category=furniture, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:13:48,156 | INFO | User 4 searching products with keyword: Furniture
+2025-06-12 18:13:55,754 | INFO | User 4 searching products with keyword: Lenovo
+2025-06-12 18:14:44,314 | INFO | User 4 searching products with keyword: Laptop
+2025-06-12 18:14:53,160 | INFO | User 4 searching products with keyword: HP
+2025-06-12 18:15:01,324 | INFO | User 4 searching products with keyword: table
+2025-06-12 18:15:10,626 | INFO | User 4 searching products with keyword: furniture
+2025-06-12 18:15:28,378 | INFO | User 4 searching products with keyword: laptop
+2025-06-12 18:16:02,307 | INFO | User 4 searching products with keyword: laptop
+2025-06-12 18:16:12,331 | INFO | User 4 searching products with keyword: Furniture
+2025-06-12 18:16:37,156 | WARNING | Failed login: admin3@example.com
+2025-06-12 18:16:37,159 | WARNING | [POST /auth/signin] Invalid credentials
+2025-06-12 18:16:50,545 | INFO | Successful login: admin3@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:17:57,154 | INFO | Admin 6 updating product ID: 1
+2025-06-12 18:17:57,157 | WARNING | Update failed - Product ID 1 not found for admin 6
+2025-06-12 18:17:57,159 | WARNING | [PUT /admin/products/1] Product not found: Product Not Found
+2025-06-12 18:18:14,556 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:18:47,482 | INFO | Admin 1 updating product ID: 5
+2025-06-12 18:18:47,484 | WARNING | Update failed - Product ID 5 not found for admin 1
+2025-06-12 18:18:47,486 | WARNING | [PUT /admin/products/5] Product not found: Product Not Found
+2025-06-12 18:18:56,210 | INFO | Admin 1 retrieving all products (skip=0, limit=10)
+2025-06-12 18:20:08,903 | INFO | Admin 1 updating product ID: 1
+2025-06-12 18:20:17,738 | INFO | Admin 1 fetching product ID: 1
+2025-06-12 18:20:53,858 | INFO | Successful login: parthsavdekar59@gmail.com | Role: RoleEnum.user
+2025-06-12 18:21:26,372 | INFO | User 4 listing products with filters | category=laptop, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:21:55,164 | INFO | User 4 listing products with filters | category=Laptop, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:22:04,762 | INFO | User 4 listing products with filters | category=Lenovo, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:22:15,449 | INFO | User 4 searching products with keyword: len
+2025-06-12 18:22:22,427 | INFO | User 4 searching products with keyword: lap
+2025-06-12 18:22:27,140 | INFO | User 4 searching products with keyword: 3
+2025-06-12 18:22:33,594 | INFO | User 4 searching products with keyword: hp
+2025-06-12 18:22:40,351 | INFO | User 4 searching products with keyword: tab
+2025-06-12 18:22:46,625 | INFO | User 4 searching products with keyword: fur
+2025-06-12 18:22:53,973 | INFO | User 4 searching products with keyword: furniture
+2025-06-12 18:22:59,134 | INFO | User 4 searching products with keyword: Furniture
+2025-06-12 18:23:17,217 | INFO | User 4 searching products with keyword: table
+2025-06-12 18:23:44,921 | INFO | User 4 searching products with keyword: fur
+2025-06-12 18:23:56,413 | INFO | User 4 viewing product ID: 1
+2025-06-12 18:25:46,340 | INFO | User 4 viewing product ID: 1
+2025-06-12 18:26:14,723 | INFO | User 4 viewing product ID: 5
+2025-06-12 18:27:16,628 | INFO | User 4 viewing product ID: 5
+2025-06-12 18:27:16,630 | WARNING | Product ID 5 not found requested by user 4
+2025-06-12 18:27:16,631 | WARNING | [GET /products/5] Product not found: Product Not Found
+2025-06-12 18:27:21,318 | INFO | User 4 viewing product ID: 3
+2025-06-12 18:28:32,320 | INFO | User 4 viewing product ID: 3
+2025-06-12 18:28:48,803 | WARNING | User 4 has an empty cart
+2025-06-12 18:28:48,804 | WARNING | [GET /cart/] Empty cart: Cart is empty
+2025-06-12 18:29:15,269 | INFO | User 4 adding product 5 to cart (Quantity: 1)
+2025-06-12 18:29:15,272 | WARNING | [POST /cart/] Product not found: Product Not Found
+2025-06-12 18:29:20,767 | INFO | User 4 adding product 2 to cart (Quantity: 1)
+2025-06-12 18:29:26,649 | INFO | User 4 viewing cart with 1 items
+2025-06-12 18:29:32,648 | INFO | User 4 adding product 3 to cart (Quantity: 1)
+2025-06-12 18:29:36,497 | INFO | User 4 viewing cart with 2 items
+2025-06-12 18:29:47,279 | WARNING | User 4 tried updating non-existent cart item: Product ID 5
+2025-06-12 18:29:47,281 | WARNING | [PUT /cart/5] Cart item not found: Product ID 5
+2025-06-12 18:31:43,414 | WARNING | User 4 tried updating non-existent cart item: Product ID 5
+2025-06-12 18:31:43,416 | WARNING | [PUT /cart/5] Cart item not found: Product ID 5
+2025-06-12 18:31:48,757 | WARNING | User 4 tried updating non-existent cart item: Product ID 4
+2025-06-12 18:31:48,759 | WARNING | [PUT /cart/4] Cart item not found: Product ID 4
+2025-06-12 18:31:58,756 | INFO | User 4 updated product 3 quantity to 1 in cart
+2025-06-12 18:33:40,103 | INFO | User 4 viewing cart with 2 items
+2025-06-12 18:33:58,824 | WARNING | User 4 tried updating non-existent cart item: Product ID 1
+2025-06-12 18:33:58,826 | WARNING | [PUT /cart/1] Cart item not found: Product ID 1
+2025-06-12 18:34:06,355 | WARNING | User 4 tried updating non-existent cart item: Product ID 4
+2025-06-12 18:34:06,357 | WARNING | [PUT /cart/4] Cart item not found: Product ID 4
+2025-06-12 18:34:17,587 | INFO | User 4 updated product 2 quantity to 2 in cart
+2025-06-12 18:34:39,890 | INFO | User 4 viewing cart with 2 items
+2025-06-12 18:34:48,092 | INFO | User 4 viewing cart with 2 items
+2025-06-12 18:34:58,196 | INFO | User 4 updated product 2 quantity to 1 in cart
+2025-06-12 18:35:11,715 | WARNING | User 4 tried to delete non-existent cart item: Product ID 5
+2025-06-12 18:35:11,718 | WARNING | [DELETE /cart/5] Cart item not found: Product ID 5
+2025-06-12 18:35:16,882 | WARNING | User 4 tried to delete non-existent cart item: Product ID 1
+2025-06-12 18:35:16,897 | WARNING | [DELETE /cart/1] Cart item not found: Product ID 1
+2025-06-12 18:35:22,613 | INFO | User 4 removed product 3 from cart
+2025-06-12 18:35:28,964 | INFO | User 4 viewing cart with 1 items
+2025-06-12 18:35:45,014 | INFO | User 4 initiated checkout
+2025-06-12 18:35:45,053 | INFO | Checkout successful — Order ID 1 created for user 4
+2025-06-12 18:36:00,694 | INFO | User 4 requested their order history
+2025-06-12 18:36:00,699 | INFO | User 4 has 1 orders
+2025-06-12 18:36:14,441 | INFO | User 4 requested details for order ID: 2
+2025-06-12 18:36:14,445 | WARNING | Order ID 2 not found for user 4
+2025-06-12 18:36:14,446 | WARNING | [GET /orders/2] Order not found: Order not found with ID 2
+2025-06-12 18:36:19,691 | INFO | User 4 requested details for order ID: 1
+2025-06-12 18:36:19,694 | INFO | Order ID 1 returned to user 4
+2025-06-12 18:42:01,628 | WARNING | Failed login: admin1@gmail.com
+2025-06-12 18:42:01,631 | WARNING | [POST /auth/signin] Invalid credentials
+2025-06-12 18:42:08,787 | WARNING | Failed login: admin1@gmail.com
+2025-06-12 18:42:08,790 | WARNING | [POST /auth/signin] Invalid credentials
+2025-06-12 18:42:14,885 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:43:12,657 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:43:15,843 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:46:04,133 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
+2025-06-12 18:46:33,651 | INFO | User 1 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-12 18:47:04,747 | INFO | Admin 1 retrieving all products (skip=0, limit=10)
