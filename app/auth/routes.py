@@ -1,6 +1,6 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.core.database import SessionLocal, get_db
+from app.core.database import get_db
 from app.auth.schemas import UserCreate,UserOut,UserSignin,ForgotPassword, ResetPassword, Token
 from app.exceptions.exception import DuplicateEmailException, InvalidCredentialsException, UserNotFoundException
 from app.auth.utils import create_reset_token, hash_password, mark_token_used,verify_password,create_access_token, verify_reset_token, send_reset_email
@@ -14,7 +14,7 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 def register(user: UserCreate, db: Session = Depends(get_db)):
 
     if db.query(User).filter(User.email == user.email).first():
-        logger.warning(f"Signup failed Duplicate email: {user.email}")
+        logger.error(f"Signup failed Duplicate email: {user.email}")
         raise DuplicateEmailException(user.email)
 
     new_user = User(
@@ -36,7 +36,7 @@ def login(form: UserSignin, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == form.email).first()
 
     if not user or not verify_password(form.password, user.hashed_password):
-        logger.warning(f"Failed login: {form.email}")
+        logger.error(f"Failed login: {form.email}")
         raise InvalidCredentialsException()
     
     tokenstr = create_access_token(data={"sub": user.email, "role": user.role})

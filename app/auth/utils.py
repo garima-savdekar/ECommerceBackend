@@ -51,8 +51,10 @@ def create_reset_token(db: Session, user_id: int) -> str:
 
 #verify token for reset password
 def verify_reset_token(db: Session, token: str) -> PasswordResetToken:
+    logger.info(f"Verifying reset token: {token}")
     record = db.query(PasswordResetToken).filter_by(token=token, used=False).first()
     if not record:
+        logger.warning(f"Reset token not found or already used: {token}")
         raise HTTPException(status_code=400, detail="Invalid or expired token.")
     
     if record.expiration_time.tzinfo is None:
@@ -61,17 +63,20 @@ def verify_reset_token(db: Session, token: str) -> PasswordResetToken:
         record_expiration = record.expiration_time
 
     if record_expiration < datetime.now(timezone.utc):
+        logger.warning(f"Reset token expired: {token}")
         raise HTTPException(status_code=400, detail="Token has expired.")
     
     return record
 
 #Mark token used after using the token for password change
 def mark_token_used(db: Session, token_record: PasswordResetToken):
+    logger.info(f"Marking reset token as used: {token_record.token}")
     token_record.used = True
     db.commit()
 
 #Function to send the email to user for password reset
 def send_reset_email(email: str, token: str) -> str:
+    logger.info(f"Sending password reset email to: {email}")
     reset_link = f"http://localhost:8000/auth/reset-password?token={token}"
     subject = "Reset Your Password"
     body = f"""

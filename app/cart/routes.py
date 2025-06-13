@@ -30,7 +30,7 @@ def view_cart(db: Session = Depends(get_db), user=Depends(require_user)):
 def update_cart(product_id: int, data: schemas.CartItemUpdate, db: Session = Depends(get_db), user=Depends(require_user)):
     updated = crud.update_cart_item(db, user_id=user.id, product_id=product_id, quantity=data.quantity)
     if not updated:
-        logger.warning(f"User {user.id} tried updating non-existent cart item: Product ID {product_id}")
+        logger.error(f"User {user.id} tried updating non-existent cart item: Product ID {product_id}")
         raise CartItemNotFoundException(product_id)
     logger.info(f"User {user.id} updated product {product_id} quantity to {data.quantity} in cart")
     return updated
@@ -40,7 +40,7 @@ def update_cart(product_id: int, data: schemas.CartItemUpdate, db: Session = Dep
 def delete_item(product_id: int, db: Session = Depends(get_db), user=Depends(require_user)):
     removed = crud.remove_cart_item(db, user_id=user.id, product_id=product_id)
     if not removed:
-        logger.warning(f"User {user.id} tried to delete non-existent cart item: Product ID {product_id}")
+        logger.error(f"User {user.id} tried to delete non-existent cart item: Product ID {product_id}")
         raise CartItemNotFoundException(product_id)
     logger.info(f"User {user.id} removed product {product_id} from cart")
     return {"message": "Item removed from cart"}

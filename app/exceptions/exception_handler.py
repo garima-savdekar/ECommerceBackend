@@ -17,7 +17,7 @@ def exception_handlers(app):
     
     @app.exception_handler(DuplicateEmailException)
     async def duplicate_email_exception_handler(request: Request, exc: DuplicateEmailException):
-        logger.warning(f"[{request.method} {request.url.path}] Duplicate email: {exc.email}")
+        logger.error(f"[{request.method} {request.url.path}] Duplicate email: {exc.email}")
         return JSONResponse(
             status_code=400,
             content={"error": True,
@@ -27,7 +27,7 @@ def exception_handlers(app):
     
     @app.exception_handler(InvalidCredentialsException)
     async def invalid_credentials_exception_handler(request: Request, exc: InvalidCredentialsException):
-        logger.warning(f"[{request.method} {request.url.path}] Invalid credentials")
+        logger.error(f"[{request.method} {request.url.path}] Invalid credentials")
         return JSONResponse(
             status_code=401,
             content={ "error": True,
@@ -37,7 +37,7 @@ def exception_handlers(app):
 
     @app.exception_handler(UserNotFoundException)
     async def user_not_found_exception_handler(request: Request, exc: UserNotFoundException):
-        logger.warning(f"[{request.method} {request.url.path}] User not found: {exc.message}")
+        logger.error(f"[{request.method} {request.url.path}] User not found: {exc.message}")
         return JSONResponse(
             status_code=400,
             content={"error": True,
@@ -47,7 +47,7 @@ def exception_handlers(app):
     
     @app.exception_handler(ProductNotFoundException)
     async def product_not_found_exception_handler(request: Request, exc: ProductNotFoundException):
-        logger.warning(f"[{request.method} {request.url.path}] Product not found: {exc.message}")
+        logger.error(f"[{request.method} {request.url.path}] Product not found: {exc.message}")
         return JSONResponse(
             status_code=400,
             content={"error": True,
@@ -57,7 +57,7 @@ def exception_handlers(app):
 
     @app.exception_handler(ItemOutOfStockException)
     async def item_out_of_stock_exception_handler(request: Request, exc: ItemOutOfStockException):
-        logger.warning(f"[{request.method} {request.url.path}] Out of stock: {exc.item_name}")
+        logger.error(f"[{request.method} {request.url.path}] Out of stock: {exc.item_name}")
         return JSONResponse(
             status_code=400,
             content={"error": True,
@@ -68,7 +68,7 @@ def exception_handlers(app):
     
     @app.exception_handler(CartItemNotFoundException)
     async def cart_item_not_found_handler(request: Request, exc: CartItemNotFoundException):
-        logger.warning(f"[{request.method} {request.url.path}] Cart item not found: Product ID {exc.item_id}")
+        logger.error(f"[{request.method} {request.url.path}] Cart item not found: Product ID {exc.item_id}")
         return JSONResponse(
             status_code=404,
             content={ "error": True,
@@ -78,7 +78,7 @@ def exception_handlers(app):
 
     @app.exception_handler(EmptyCartException)
     async def empty_cart_exception_handler(request: Request, exc: EmptyCartException):
-        logger.warning(f"[{request.method} {request.url.path}] Empty cart: {exc.message}")
+        logger.error(f"[{request.method} {request.url.path}] Empty cart: {exc.message}")
         return JSONResponse(
         status_code=400,
         content={"error": True,
@@ -88,7 +88,7 @@ def exception_handlers(app):
 
     @app.exception_handler(OrderNotFoundException)
     async def order_not_found_handler(request: Request, exc: OrderNotFoundException):
-        logger.warning(f"[{request.method} {request.url.path}] Order not found: {exc.message}")
+        logger.error(f"[{request.method} {request.url.path}] Order not found: {exc.message}")
         return JSONResponse(
         status_code=404,
         content={"error": True,

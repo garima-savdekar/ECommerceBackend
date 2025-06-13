@@ -178,3 +178,28 @@
 2025-06-12 18:46:04,133 | INFO | Successful login: admin1@gmail.com | Role: RoleEnum.admin
 2025-06-12 18:46:33,651 | INFO | User 1 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
 2025-06-12 18:47:04,747 | INFO | Admin 1 retrieving all products (skip=0, limit=10)
+2025-06-13 13:58:28,119 | INFO | User registered successfully: rohan@gmail.com | Role: RoleEnum.user
+2025-06-13 14:22:00,434 | INFO | Successful login: rohan@gmail.com | Role: RoleEnum.user
+2025-06-13 14:22:23,660 | INFO | User 7 listing products with filters | category=None, min_price=None, max_price=None, sort_by=id, skip=0, limit=10
+2025-06-13 14:22:45,192 | INFO | User 7 searching products with keyword: fur
+2025-06-13 14:22:58,133 | INFO | User 7 viewing product ID: 5
+2025-06-13 14:22:58,136 | WARNING | Product ID 5 not found requested by user 7
+2025-06-13 14:22:58,144 | WARNING | [GET /products/5] Product not found: Product Not Found
+2025-06-13 14:23:03,377 | INFO | User 7 viewing product ID: 3
+2025-06-13 14:23:11,651 | INFO | User 7 adding product 1 to cart (Quantity: 1)
+2025-06-13 14:23:21,346 | INFO | User 7 viewing cart with 1 items
+2025-06-13 14:23:31,957 | WARNING | User 7 tried updating non-existent cart item: Product ID 2
+2025-06-13 14:23:31,958 | WARNING | [PUT /cart/2] Cart item not found: Product ID 2
+2025-06-13 14:23:41,876 | INFO | User 7 updated product 1 quantity to 2 in cart
+2025-06-13 14:24:01,592 | INFO | User 7 initiated checkout
+2025-06-13 14:24:01,620 | INFO | Checkout successful — Order ID 2 created for user 7
+2025-06-13 14:24:37,633 | INFO | User 7 requested their order history
+2025-06-13 14:24:37,642 | INFO | User 7 has 1 orders
+2025-06-13 14:24:47,193 | INFO | User 7 requested details for order ID: 1
+2025-06-13 14:24:47,196 | WARNING | Order ID 1 not found for user 7
+2025-06-13 14:24:47,198 | WARNING | [GET /orders/1] Order not found: Order not found with id 1
+2025-06-13 14:24:59,160 | INFO | User 7 requested details for order ID: 2
+2025-06-13 14:24:59,161 | INFO | Order ID 2 returned to user 7
+2025-06-13 14:25:06,753 | INFO | User 7 requested details for order ID: 3
+2025-06-13 14:25:06,754 | WARNING | Order ID 3 not found for user 7
+2025-06-13 14:25:06,760 | WARNING | [GET /orders/3] Order not found: Order not found with id 3

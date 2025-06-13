@@ -54,10 +54,3 @@ def delete_product(product_id: int, db: Session = Depends(get_db),current_user: 
     logger.info(f"Admin {current_user.id} deleted product ID: {product_id}")
     return {"message": "Product deleted successfully"}
 
-
-
-
-
-# raise HTTPException(
-#         status_code=status.HTTP_404_NOT_FOUND,
-#         detail="Product  not found."

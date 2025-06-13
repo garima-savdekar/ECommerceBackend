@@ -39,7 +39,7 @@ def delete_product(db: Session, product_id: int, admin_id:int):
     return True
 
 #Get all products including filters
-def products_listing(db: Session, category=None, min_price=None, max_price=None, sort_by=None, skip=0, limit=10):
+def products_listing(db: Session, category:str=None, min_price:float=None, max_price:float=None, sort_by:str="id", page:int=1, page_size:int=10):
     query = db.query(models.Product)
 
     if category:
@@ -52,7 +52,7 @@ def products_listing(db: Session, category=None, min_price=None, max_price=None,
     if sort_by in ["price", "name", "id"]:
         query = query.order_by(getattr(models.Product, sort_by))
 
-    return query.offset(skip).limit(limit).all()
+    return query.offset((page-1)*page_size).limit(page_size).all()
 
 #Search product by keyword matches in name,description, category
 def search_products(db: Session, keyword: str):
